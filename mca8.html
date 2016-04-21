@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+		width:10;
+		height:0;
+		font-size: 0;
+	}
+	.menu {
+		background-color: green:
+		height:5px; 
+	}
+	.menu li{
+		list-style-type: none;
+		float: left;
+		padding: 0px 20px;
+	}
+	.meun li:not(:first-child){
+		border-left: 1px solid black;
+	}
+	.meun li a:link{
+		color: red;
+		text-decoration: none;
+	}
+	.meun li a:hover{
+		color:blue;
+		background-color: green:
+	}
+	</style>
+</head>
+<body>
+	<al class="menu clearfix">
+		<li><a href="#">金</a></li>
+		<li><a href="#">木</a></li>
+		<li><a href="#">水</a></li>
+		<li><a href="#">火</a></li>
+		<li><a href="#">土</a></li>
+</body>
+</html>
