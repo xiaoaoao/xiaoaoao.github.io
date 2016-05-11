@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+     .clearfix::after{
+      content:"";
+      width: 0;
+      height: 0;
+      font-size:0;
+      display: block;
+      clear: both;
+    }
+    .top{
+      width: 1000px;
+      margin: 10px auto;
+      position: relative;
+    }
+    .top .logo{
+      width: 193px;
+      height: 40px;
+      background: url('http://dl.pinyin.sogou.com/index/header/logo.png');
+      float: left;
+    }
+    .top .search{
+      width: 325px;
+      height: 32px;
+      background: url('http://dl.pinyin.sogou.com/index/header/search_box.png');
+      float: right;
+    }
+    .banner{
+      height:400px;
+      background: url('http://dl.pinyin.sogou.com/index/2.0/banner_8.0.2.jpg') center;
+    }
+    .banner .btn{
+      width: 241px;
+      height: 60px;
+      display: inline-block;
+      background: url('http://dl.pinyin.sogou.com/index/2.0/btn_down_one_8.0.1.png') left top;
+      position: absolute;
+      right:140px;
+      top:300px;
+    }
+    /* 
+    脱离常规流的方式
+      浮动
+        脱离常规流
+        向左或向右移动，移动到前一个左浮动或右浮动元素的边缘，移动到父元素边缘
+        一旦浮动，一定清除
+          清除浮动的两种方式
+            在产生浮动的元素的后面，新建一个div，宽高为0，clear：both
+            在产生浮动元素的父元素上，添加一个类  clearfix
+      定位 绝对定位、固定定位
+    
+    块状元素水平居中
+      固定宽度  水平方向的margin设置为auto
+    
+    一个块状元素，默认宽度为100%，默认高度auto
+      默认高度为auto，有多少算多少
+    
+    链接默认为行内元素（不要占一行，没有宽和高的），需要转换为行内块元素或块元素才可以用宽和高和背景
+    
+    
+    绝对定位的基准  最近的已经定位过的祖先元素
+    */
+  </style>
+</head>
+<body>
+  <div class="top clearfix">
+    <div class="logo"></div>
+    <div class="search"></div>
+<!--     <div class="clear"></div> -->
+  </div>
+  <div class="banner">
+    <div class="top">
+      <a class="btn" href="#"></a>
+    </div>
+  </div>
+</body>
+</html>
